@@ -27,6 +27,15 @@ jobs:
         
     - name: Copy tokens to root directory
       run: |
+        # Ensure dispatches directory exists
+        mkdir -p dispatches
+        
+        # Check if dispatches/tokens.json exists, if not create it from root tokens.json
+        if [ ! -f "dispatches/tokens.json" ]; then
+          echo "dispatches/tokens.json not found, creating from root tokens.json"
+          cp tokens.json dispatches/tokens.json
+        fi
+        
         # Copy the tokens.json file to the root directory to make it visible
         cp dispatches/tokens.json ./tokens.json
         
@@ -38,12 +47,13 @@ jobs:
         
         ## Files
         
-        - `tokens.json` - The main design tokens file
-        - `dispatches/tokens.json` - Source tokens file
+        - `tokens.json` - The main design tokens file (automatically generated)
+        - `dispatches/tokens.json` - Source tokens file (updated by plugin)
         
         ## Usage
         
         The tokens are automatically processed and made available in the root directory.
+        The plugin updates `dispatches/tokens.json` and this workflow copies it to the root.
         EOF
         
     - name: Commit and push changes
