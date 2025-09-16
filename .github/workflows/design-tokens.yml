@@ -25,10 +25,17 @@ jobs:
       with:
         node-version: '18'
         
-    - name: Copy tokens to root directory
+    - name: Install Style Dictionary
       run: |
-        # Ensure dispatches directory exists
+        npm init -y
+        npm install style-dictionary
+        
+    - name: Process tokens with Style Dictionary
+      run: |
+        # Ensure directories exist
         mkdir -p dispatches
+        mkdir -p dist
+        mkdir -p config
         
         # Check if dispatches/tokens.json exists, if not create it from root tokens.json
         if [ ! -f "dispatches/tokens.json" ]; then
@@ -36,24 +43,61 @@ jobs:
           cp tokens.json dispatches/tokens.json
         fi
         
-        # Copy the tokens.json file to the root directory to make it visible
-        cp dispatches/tokens.json ./tokens.json
+        # Create Style Dictionary configuration
+        cat > config/style-dictionary.config.js << 'EOF'
+        module.exports = {
+          source: ['dispatches/tokens.json'],
+          platforms: {
+            dtcg: {
+              transformGroup: 'dtcg',
+              buildPath: 'dist/',
+              files: [
+                {
+                  destination: 'tokens.json',
+                  format: 'json/flat',
+                  options: {
+                    outputReferences: false
+                  }
+                },
+                {
+                  destination: 'tokens-dtcg.json',
+                  format: 'json/dtcg'
+                }
+              ]
+            }
+          }
+        };
+        EOF
+        
+        # Run Style Dictionary transformation
+        npx style-dictionary build --config config/style-dictionary.config.js
+        
+        # Copy the transformed tokens to root directory
+        cp dist/tokens.json ./tokens.json
         
         # Also create a README for the tokens
         cat > README.md << 'EOF'
         # Design Tokens
         
-        This repository contains design tokens for the project.
+        This repository contains design tokens for the project, automatically processed with Style Dictionary to DTCG format.
         
         ## Files
         
-        - `tokens.json` - The main design tokens file (automatically generated)
+        - `tokens.json` - Main design tokens file (DTCG format, automatically generated)
+        - `tokens-dtcg.json` - DTCG-compliant tokens file
         - `dispatches/tokens.json` - Source tokens file (updated by plugin)
+        - `dist/` - Build output directory with transformed tokens
+        
+        ## Formats
+        
+        - **DTCG Format**: Standardized design token format following Design Token Community Group specifications
+        - **JSON Flat**: Flattened structure for easy consumption
+        - **Source Format**: Original plugin format for editing
         
         ## Usage
         
-        The tokens are automatically processed and made available in the root directory.
-        The plugin updates `dispatches/tokens.json` and this workflow copies it to the root.
+        The tokens are automatically processed with Style Dictionary and made available in the root directory.
+        The plugin updates `dispatches/tokens.json` and this workflow transforms them to DTCG format.
         EOF
         
     - name: Commit and push changes
@@ -66,6 +110,6 @@ jobs:
           echo "No changes to commit"
         else
           git add .
-          git commit -m "Update design tokens [skip ci]"
+          git commit -m "Update design tokens (DTCG format) [skip ci]"
           git push origin HEAD:main
         fi
