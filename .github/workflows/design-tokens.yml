@@ -48,8 +48,8 @@ jobs:
         module.exports = {
           source: ['dispatches/tokens.json'],
           platforms: {
-            dtcg: {
-              transformGroup: 'dtcg',
+            web: {
+              transformGroup: 'web',
               buildPath: 'dist/',
               files: [
                 {
@@ -61,7 +61,11 @@ jobs:
                 },
                 {
                   destination: 'tokens-dtcg.json',
-                  format: 'json/dtcg'
+                  format: 'json/nested'
+                },
+                {
+                  destination: 'tokens-css.json',
+                  format: 'css/variables'
                 }
               ]
             }
@@ -79,25 +83,27 @@ jobs:
         cat > README.md << 'EOF'
         # Design Tokens
         
-        This repository contains design tokens for the project, automatically processed with Style Dictionary to DTCG format.
+        This repository contains design tokens for the project, automatically processed with Style Dictionary.
         
         ## Files
         
-        - `tokens.json` - Main design tokens file (DTCG format, automatically generated)
-        - `tokens-dtcg.json` - DTCG-compliant tokens file
+        - `tokens.json` - Main design tokens file (flat JSON, automatically generated)
+        - `tokens-dtcg.json` - Nested JSON format for better structure
+        - `tokens-css.json` - CSS custom properties format
         - `dispatches/tokens.json` - Source tokens file (updated by plugin)
-        - `dist/` - Build output directory with transformed tokens
+        - `dist/` - Build output directory with all transformed formats
         
         ## Formats
         
-        - **DTCG Format**: Standardized design token format following Design Token Community Group specifications
         - **JSON Flat**: Flattened structure for easy consumption
+        - **JSON Nested**: Hierarchical structure for better organization
+        - **CSS Variables**: Ready-to-use CSS custom properties
         - **Source Format**: Original plugin format for editing
         
         ## Usage
         
-        The tokens are automatically processed with Style Dictionary and made available in the root directory.
-        The plugin updates `dispatches/tokens.json` and this workflow transforms them to DTCG format.
+        The tokens are automatically processed with Style Dictionary and made available in multiple formats.
+        The plugin updates `dispatches/tokens.json` and this workflow transforms them using Style Dictionary.
         EOF
         
     - name: Commit and push changes
