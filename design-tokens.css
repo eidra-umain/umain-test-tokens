@@ -1,0 +1,522 @@
+/* Design Tokens CSS Custom Properties */
+/* Generated from Figma Variables */
+/* Generated on: 2025-09-16T17:16:08.726Z */
+
+/* Palette */
+/* CSS custom properties for Palette */
+:root {
+  /* CSS custom property for Palette/Fuchsia/300 */
+  --palette-palettefuchsia300: rgb(255, 143, 195);
+  /* CSS custom property for Palette/Fuchsia/700 */
+  --palette-palettefuchsia700: rgb(154, 10, 77);
+  /* CSS custom property for Palette/Blue/300 */
+  --palette-paletteblue300: rgb(77, 187, 255);
+  /* CSS custom property for Palette/Blue/700 */
+  --palette-paletteblue700: rgb(0, 107, 174);
+  /* CSS custom property for Palette/Orange/100 */
+  --palette-paletteorange100: rgb(255, 249, 245);
+  /* CSS custom property for Palette/Orange/400 */
+  --palette-paletteorange400: rgb(239, 136, 73);
+  /* CSS custom property for Palette/Orange/700 */
+  --palette-paletteorange700: rgb(190, 81, 0);
+  /* CSS custom property for Palette/Green/100 */
+  --palette-palettegreen100: rgb(244, 247, 245);
+  /* CSS custom property for Palette/Green/400 */
+  --palette-palettegreen400: rgb(84, 176, 119);
+  /* CSS custom property for Palette/Green/700 */
+  --palette-palettegreen700: rgb(38, 79, 54);
+  /* CSS custom property for Palette/Red/100 */
+  --palette-palettered100: rgb(253, 242, 242);
+  /* CSS custom property for Palette/Red/400 */
+  --palette-palettered400: rgb(253, 104, 109);
+  /* CSS custom property for Palette/Red/700 */
+  --palette-palettered700: rgb(219, 0, 7);
+  /* CSS custom property for Palette/Gold/100 */
+  --palette-palettegold100: rgb(251, 228, 167);
+  /* CSS custom property for Palette/Gold/400 */
+  --palette-palettegold400: rgb(255, 188, 13);
+  /* CSS custom property for Palette/Gold/700 */
+  --palette-palettegold700: rgb(192, 139, 0);
+  /* CSS custom property for Palette/Greyscale/800_15 */
+  --palette-palettegreyscale80015: rgba(41, 41, 41, 0.15000000596046448);
+  /* CSS custom property for Palette/Greyscale/800_20 */
+  --palette-palettegreyscale80020: rgba(41, 41, 41, 0.20000000298023224);
+  /* CSS custom property for Palette/Greyscale/White_15 */
+  --palette-palettegreyscalewhite15: rgba(255, 255, 255, 0.15000000596046448);
+  /* CSS custom property for Palette/Greyscale/White_20 */
+  --palette-palettegreyscalewhite20: rgba(255, 255, 255, 0.20000000298023224);
+  /* CSS custom property for Palette/Greyscale/White */
+  --palette-palettegreyscalewhite: rgb(255, 255, 255);
+  /* CSS custom property for Palette/Greyscale/100 */
+  --palette-palettegreyscale100: rgb(249, 249, 249);
+  /* CSS custom property for Palette/Greyscale/200 */
+  --palette-palettegreyscale200: rgb(243, 243, 243);
+  /* CSS custom property for Palette/Greyscale/300 */
+  --palette-palettegreyscale300: rgb(214, 214, 214);
+  /* CSS custom property for Palette/Greyscale/400 */
+  --palette-palettegreyscale400: rgb(173, 173, 173);
+  /* CSS custom property for Palette/Greyscale/500 */
+  --palette-palettegreyscale500: rgb(149, 149, 149);
+  /* CSS custom property for Palette/Greyscale/600 */
+  --palette-palettegreyscale600: rgb(111, 111, 111);
+  /* CSS custom property for Palette/Greyscale/700 */
+  --palette-palettegreyscale700: rgb(61, 61, 61);
+  /* CSS custom property for Palette/Greyscale/800 */
+  --palette-palettegreyscale800: rgb(41, 41, 41);
+  /* CSS custom property for Palette/Greyscale/900 */
+  --palette-palettegreyscale900: rgb(27, 27, 27);
+  /* CSS custom property for Palette/Greyscale/White_00 */
+  --palette-palettegreyscalewhite00: rgba(255, 255, 255, 0);
+  /* CSS custom property for Palette/Greyscale/100_00 */
+  --palette-palettegreyscale10000: rgba(249, 249, 249, 0);
+  /* CSS custom property for Palette/Greyscale/800_00 */
+  --palette-palettegreyscale80000: rgba(41, 41, 41, 0);
+  /* CSS custom property for Palette/Greyscale/900_00 */
+  --palette-palettegreyscale90000: rgba(27, 27, 27, 0);
+}
+
+/* Semantic Colors */
+/* CSS custom properties for Semantic Colors */
+:root {
+  /* It is used only in design to visualize element state backgrounds */
+  --semantic-colors-interactivesecondarypressed: rgb(214, 214, 214);
+  /* It is used only in design to visualize element state backgrounds */
+  --semantic-colors-interactiveprimarydisabled: rgb(251, 228, 167);
+  /* It is used only in design to visualize element state backgrounds */
+  --semantic-colors-interactiveprimarypressed: rgb(192, 139, 0);
+  /* CSS custom property for stroke/error */
+  --semantic-colors-strokeerror: rgb(219, 0, 7);
+  /* CSS custom property for stroke/active */
+  --semantic-colors-strokeactive: rgb(41, 41, 41);
+  /* CSS custom property for stroke/tertiary */
+  --semantic-colors-stroketertiary: rgb(214, 214, 214);
+  /* CSS custom property for stroke/secondary */
+  --semantic-colors-strokesecondary: rgb(111, 111, 111);
+  /* CSS custom property for stroke/primary */
+  --semantic-colors-strokeprimary: rgba(41, 41, 41, 0.20000000298023224);
+  /* CSS custom property for fg/accent3 */
+  --semantic-colors-fgaccent3: rgb(239, 136, 73);
+  /* CSS custom property for fg/accent2 */
+  --semantic-colors-fgaccent2: rgb(190, 81, 0);
+  /* CSS custom property for fg/accent1 */
+  --semantic-colors-fgaccent1: rgb(154, 10, 77);
+  /* CSS custom property for fg/error */
+  --semantic-colors-fgerror: rgb(219, 0, 7);
+  /* CSS custom property for fg/success */
+  --semantic-colors-fgsuccess: rgb(38, 79, 54);
+  /* CSS custom property for fg/link */
+  --semantic-colors-fglink: rgb(0, 107, 174);
+  /* CSS custom property for fg/inverted */
+  --semantic-colors-fginverted: rgb(255, 255, 255);
+  /* CSS custom property for fg/quaternary */
+  --semantic-colors-fgquaternary: rgb(214, 214, 214);
+  /* CSS custom property for fg/tertiary */
+  --semantic-colors-fgtertiary: rgb(173, 173, 173);
+  /* CSS custom property for fg/secondary */
+  --semantic-colors-fgsecondary: rgb(111, 111, 111);
+  /* CSS custom property for fg/colorOnBrand */
+  --semantic-colors-fgcoloronbrand: rgb(41, 41, 41);
+  /* CSS custom property for fg/primary */
+  --semantic-colors-fgprimary: rgb(41, 41, 41);
+  /* CSS custom property for bg/inverted */
+  --semantic-colors-bginverted: rgb(41, 41, 41);
+  /* CSS custom property for bg/brand */
+  --semantic-colors-bgbrand: rgb(255, 188, 13);
+  /* CSS custom property for bg/warning */
+  --semantic-colors-bgwarning: rgb(255, 249, 245);
+  /* CSS custom property for bg/success */
+  --semantic-colors-bgsuccess: rgb(244, 247, 245);
+  /* CSS custom property for bg/error */
+  --semantic-colors-bgerror: rgb(253, 242, 242);
+  /* CSS custom property for bg/tertiary */
+  --semantic-colors-bgtertiary: rgb(243, 243, 243);
+  /* CSS custom property for bg/accent */
+  --semantic-colors-bgaccent: rgb(255, 255, 255);
+  /* CSS custom property for bg/secondary */
+  --semantic-colors-bgsecondary: rgb(255, 255, 255);
+  /* CSS custom property for bg/primary */
+  --semantic-colors-bgprimary: rgb(249, 249, 249);
+  /* CSS custom property for stroke/warning */
+  --semantic-colors-strokewarning: rgb(190, 81, 0);
+  /* CSS custom property for stroke/success */
+  --semantic-colors-strokesuccess: rgb(38, 79, 54);
+  /* CSS custom property for stroke/brand */
+  --semantic-colors-strokebrand: rgb(255, 188, 13);
+  /* CSS custom property for fg/accent-accessible */
+  --semantic-colors-fgaccent-accessible: rgb(192, 139, 0);
+  /* CSS custom property for fg/divider */
+  --semantic-colors-fgdivider: rgb(214, 214, 214);
+}
+
+/* Corner Radius */
+/* CSS custom properties for Corner Radius */
+:root {
+  /* CSS custom property for XS */
+  --corner-radius-xs: 2px;
+  /* CSS custom property for S */
+  --corner-radius-s: 4px;
+  /* CSS custom property for M */
+  --corner-radius-m: 8px;
+  /* CSS custom property for XL */
+  --corner-radius-xl: 16px;
+  /* CSS custom property for XXL */
+  --corner-radius-xxl: 24px;
+  /* CSS custom property for L */
+  --corner-radius-l: 12px;
+  /* CSS custom property for XXXL */
+  --corner-radius-xxxl: 40px;
+  /* CSS custom property for Infinity */
+  --corner-radius-infinity: 5000px;
+}
+
+/* Spatial System */
+/* CSS custom properties for Spatial System */
+:root {
+  /* CSS custom property for xxxlarge */
+  --spatial-system-xxxlarge: 32px;
+  /* CSS custom property for xxlarge */
+  --spatial-system-xxlarge: 24px;
+  /* CSS custom property for xlarge */
+  --spatial-system-xlarge: 20px;
+  /* CSS custom property for large */
+  --spatial-system-large: 16px;
+  /* CSS custom property for medium */
+  --spatial-system-medium: 12px;
+  /* CSS custom property for small */
+  --spatial-system-small: 8px;
+  /* CSS custom property for xsmall */
+  --spatial-system-xsmall: 4px;
+  /* CSS custom property for xxxxlarge */
+  --spatial-system-xxxxlarge: 40px;
+  /* CSS custom property for xxsmall */
+  --spatial-system-xxsmall: 2px;
+  /* CSS custom property for touchAreaMinimum */
+  --spatial-system-touchareaminimum: 48px;
+  /* CSS custom property for prototypingBottomScrollPadding */
+  --spatial-system-prototypingbottomscrollpadding: 80px;
+  /* CSS custom property for horizontalSafeAreaInset */
+  --spatial-system-horizontalsafeareainset: 62px;
+}
+
+/* Semantic Spatial */
+/* CSS custom properties for Semantic Spatial */
+:root {
+  /* iOS safeAreaInsets  / Android WindowInsetPadding */
+  --semantic-spatial-topsafeareainset: 62px;
+  /* Android: systemBars */
+  --semantic-spatial-bottomsafeareainset: 21px;
+  /* The maximum width we allow "full-width" images to grow to when the screen size increases, for example in landscape and on iPad */
+  --semantic-spatial-maximwidewidth: 450px;
+  /* CSS custom property for minColumnWidth */
+  --semantic-spatial-mincolumnwidth: 280px;
+  /* CSS custom property for maxColumnWidth */
+  --semantic-spatial-maxcolumnwidth: 450px;
+  /* CSS custom property for maxCardHeight */
+  --semantic-spatial-maxcardheight: 1000px;
+  /* Constraints for all hero banner in Home Screen. (Not sure we need this one as it will adapt to screen sizes??? */
+  --semantic-spatial-maxherobannerwidth: 375px;
+  /* Used in cards wrapping QR codes, added semantics namings and should tackle both Portrait (327pt max) and Landscape (500) */
+  --semantic-spatial-maxdealcardwidth: 375px;
+  /* iOS safeAreaInsets  / Android WindowInsetPadding. OBS Margin value 24pt transform into a "safe area inset" token, but beware this is not a safe area applied by device, is our margin transformed so that we can get reference values in Landscape, as Portrait device safe area are 0. */
+  --semantic-spatial-hsafeareainset: 24px;
+  /* CSS custom property for minDealCardWidth */
+  --semantic-spatial-mindealcardwidth: 272px;
+  /* CSS custom property for maxRewardCardWidth */
+  --semantic-spatial-maxrewardcardwidth: 190px;
+  /* For PDP image only */
+  --semantic-spatial-maxprodimagewidth: 240px;
+  /* CSS custom property for maxCodeCardWidth */
+  --semantic-spatial-maxcodecardwidth: 150;
+  /* CSS custom property for topNavBarHeaderLarge */
+  --semantic-spatial-topnavbarheaderlarge: 16px;
+  /* CSS custom property for minRewardCardWidth */
+  --semantic-spatial-minrewardcardwidth: 128px;
+  /* CSS custom property for MaxRedeemCardWidth */
+  --semantic-spatial-maxredeemcardwidth: 327px;
+  /* CSS custom property for topNavBarHeaderSmall */
+  --semantic-spatial-topnavbarheadersmall: 8px;
+  /* Use for banner components to set internal paddings. Replace Spatial System "Large" token to adapt to other devices */
+  --semantic-spatial-hbannerinset: 16px;
+}
+
+/* Gradient stops */
+/* CSS custom properties for Gradient stops */
+:root {
+  /* CSS custom property for fade-primary-bg/stop01 */
+  --gradient-stops-fade-primary-bgstop01: rgba(249, 249, 249, 0);
+  /* CSS custom property for fade-primary-bg/stop02 */
+  --gradient-stops-fade-primary-bgstop02: rgb(249, 249, 249);
+  /* CSS custom property for fade-secondary-bg/stop01 */
+  --gradient-stops-fade-secondary-bgstop01: rgba(255, 255, 255, 0);
+  /* CSS custom property for fade-secondary-bg/stop02 */
+  --gradient-stops-fade-secondary-bgstop02: rgb(255, 255, 255);
+}
+
+/* Dynamic Text Size */
+/* CSS custom properties for Dynamic Text Size */
+:root {
+  /* CSS custom property for H1 */
+  --dynamic-text-size-h1: 32px;
+  /* CSS custom property for H2 */
+  --dynamic-text-size-h2: 24px;
+  /* CSS custom property for H3 */
+  --dynamic-text-size-h3: 17px;
+  /* CSS custom property for H4 */
+  --dynamic-text-size-h4: 14px;
+  /* CSS custom property for Button */
+  --dynamic-text-size-button: 16px;
+  /* CSS custom property for Badge */
+  --dynamic-text-size-badge: 12px;
+  /* CSS custom property for H1 line-height */
+  --dynamic-text-size-h1-line-height: 35px;
+  /* CSS custom property for H2 line-height */
+  --dynamic-text-size-h2-line-height: 26px;
+  /* CSS custom property for H3 line-height */
+  --dynamic-text-size-h3-line-height: 19px;
+  /* CSS custom property for H4 line-height */
+  --dynamic-text-size-h4-line-height: 16px;
+  /* CSS custom property for Button line-height */
+  --dynamic-text-size-button-line-height: 19px;
+  /* CSS custom property for Badge line-height */
+  --dynamic-text-size-badge-line-height: 16px;
+  /* CSS custom property for Paragraph M */
+  --dynamic-text-size-paragraph-m: 14px;
+  /* CSS custom property for Paragraph M line-height */
+  --dynamic-text-size-paragraph-m-line-height: 18px;
+  /* CSS custom property for Paragraph S */
+  --dynamic-text-size-paragraph-s: 12px;
+  /* CSS custom property for Paragraph S line-height */
+  --dynamic-text-size-paragraph-s-line-height: 15px;
+  /* CSS custom property for Paragraph XS */
+  --dynamic-text-size-paragraph-xs: 10px;
+  /* CSS custom property for Paragraph XS line-height */
+  --dynamic-text-size-paragraph-xs-line-height: 16px;
+  /* CSS custom property for Amount */
+  --dynamic-text-size-amount: 20px;
+  /* CSS custom property for Amount line-height */
+  --dynamic-text-size-amount-line-height: 24px;
+}
+
+/* Image Size */
+/* CSS custom properties for Image Size */
+:root {
+  /* CSS custom property for XXS */
+  --image-size-xxs: 44px;
+  /* CSS custom property for XS */
+  --image-size-xs: 72px;
+  /* CSS custom property for S */
+  --image-size-s: 96px;
+  /* CSS custom property for M */
+  --image-size-m: 128px;
+  /* CSS custom property for L */
+  --image-size-l: 152px;
+  /* CSS custom property for XL */
+  --image-size-xl: 240px;
+  /* CSS custom property for XXL */
+  --image-size-xxl: 375px;
+}
+
+/* Icon Size */
+/* CSS custom properties for Icon Size */
+:root {
+  /* CSS custom property for L */
+  --icon-size-l: 32px;
+  /* CSS custom property for M */
+  --icon-size-m: 24px;
+  /* CSS custom property for S */
+  --icon-size-s: 20px;
+  /* CSS custom property for XS */
+  --icon-size-xs: 16px;
+  /* CSS custom property for XXS */
+  --icon-size-xxs: 12px;
+}
+
+/* Typography */
+/* CSS custom properties for Typography */
+:root {
+  /* CSS custom property for fontFamily/header */
+  --typography-fontfamilyheader: Speedee App;
+  /* CSS custom property for size/8(56) */
+  --typography-size856: 56px;
+  /* CSS custom property for size/7(32) */
+  --typography-size732: 32px;
+  /* CSS custom property for size/6(24) */
+  --typography-size624: 24px;
+  /* CSS custom property for size/4(17) */
+  --typography-size417: 17px;
+  /* CSS custom property for size/2(14) */
+  --typography-size214: 14px;
+  /* CSS custom property for size/5(20) */
+  --typography-size520: 20px;
+  /* CSS custom property for size/3(16) */
+  --typography-size316: 16px;
+  /* CSS custom property for size/0(10) */
+  --typography-size010: 10px;
+  /* CSS custom property for weight/light */
+  --typography-weightlight: 300px;
+  /* CSS custom property for weight/regular */
+  --typography-weightregular: 400px;
+  /* CSS custom property for weight/semi-bold */
+  --typography-weightsemi-bold: 600px;
+  /* CSS custom property for weight/bold */
+  --typography-weightbold: 700px;
+  /* CSS custom property for weight/medium */
+  --typography-weightmedium: 500px;
+  /* CSS custom property for size/1(12) */
+  --typography-size112: 12px;
+  /* CSS custom property for fontFamily/paragraph */
+  --typography-fontfamilyparagraph: Speedee App;
+  /* CSS custom property for line-height/1(16) */
+  --typography-line-height116: 16px;
+  /* CSS custom property for line-height/0(15) */
+  --typography-line-height015: 15px;
+  /* CSS custom property for line-height/2(18) */
+  --typography-line-height218: 18px;
+  /* CSS custom property for line-height/3(19) */
+  --typography-line-height319: 19px;
+  /* CSS custom property for line-height/4(20) */
+  --typography-line-height420: 20px;
+  /* CSS custom property for line-height/5(24) */
+  --typography-line-height524: 24px;
+  /* CSS custom property for line-height/6(26) */
+  --typography-line-height626: 26px;
+  /* CSS custom property for line-height/7(35) */
+  --typography-line-height735: 35px;
+  /* CSS custom property for line-height/8(62) */
+  --typography-line-height862: 62px;
+}
+
+/* Typography Tokens */
+/* CSS custom properties for Typography Tokens */
+:root {
+  /* CSS custom property for header/h0/size */
+  --typography-tokens-headerh0size: 56px;
+  /* CSS custom property for header/h0/weight */
+  --typography-tokens-headerh0weight: 700px;
+  /* CSS custom property for header/h1/size */
+  --typography-tokens-headerh1size: 32px;
+  /* CSS custom property for header/h1/weight */
+  --typography-tokens-headerh1weight: 700px;
+  /* CSS custom property for header/h2/size */
+  --typography-tokens-headerh2size: 24px;
+  /* CSS custom property for header/h2/weight */
+  --typography-tokens-headerh2weight: 700px;
+  /* CSS custom property for header/h3/size */
+  --typography-tokens-headerh3size: 17px;
+  /* CSS custom property for header/h3/weight */
+  --typography-tokens-headerh3weight: 700px;
+  /* CSS custom property for header/h4/size */
+  --typography-tokens-headerh4size: 14px;
+  /* CSS custom property for header/h4/weight */
+  --typography-tokens-headerh4weight: 700px;
+  /* CSS custom property for header/amount/size */
+  --typography-tokens-headeramountsize: 20px;
+  /* CSS custom property for header/amount/weight */
+  --typography-tokens-headeramountweight: 400px;
+  /* CSS custom property for header/button/size */
+  --typography-tokens-headerbuttonsize: 16px;
+  /* CSS custom property for header/button/weight */
+  --typography-tokens-headerbuttonweight: 400px;
+  /* CSS custom property for header/badge/size */
+  --typography-tokens-headerbadgesize: 12px;
+  /* CSS custom property for header/badge/weight */
+  --typography-tokens-headerbadgeweight: 700px;
+  /* CSS custom property for paragraph/md/bold/size */
+  --typography-tokens-paragraphmdboldsize: 14px;
+  /* CSS custom property for paragraph/md/bold/weight */
+  --typography-tokens-paragraphmdboldweight: 700px;
+  /* CSS custom property for paragraph/md/regular/size */
+  --typography-tokens-paragraphmdregularsize: 14px;
+  /* CSS custom property for paragraph/md/regular/weight */
+  --typography-tokens-paragraphmdregularweight: 400px;
+  /* CSS custom property for paragraph/sm/bold/size */
+  --typography-tokens-paragraphsmboldsize: 12px;
+  /* CSS custom property for paragraph/sm/bold/weight */
+  --typography-tokens-paragraphsmboldweight: 700px;
+  /* CSS custom property for paragraph/sm/regular/size */
+  --typography-tokens-paragraphsmregularsize: 12px;
+  /* CSS custom property for paragraph/sm/regular/weight */
+  --typography-tokens-paragraphsmregularweight: 400px;
+  /* CSS custom property for paragraph/xs/bold/size */
+  --typography-tokens-paragraphxsboldsize: 10px;
+  /* CSS custom property for paragraph/xs/bold/weight */
+  --typography-tokens-paragraphxsboldweight: 700px;
+  /* CSS custom property for paragraph/xs/regular/size */
+  --typography-tokens-paragraphxsregularsize: 10px;
+  /* CSS custom property for paragraph/xs/regular/weight */
+  --typography-tokens-paragraphxsregularweight: 400px;
+  /* CSS custom property for header/h0/line-height */
+  --typography-tokens-headerh0line-height: 62px;
+  /* CSS custom property for header/h1/line-height */
+  --typography-tokens-headerh1line-height: 35px;
+  /* CSS custom property for header/h2/line-height */
+  --typography-tokens-headerh2line-height: 26px;
+  /* CSS custom property for header/h3/line-height */
+  --typography-tokens-headerh3line-height: 19px;
+  /* CSS custom property for header/h4/line-height */
+  --typography-tokens-headerh4line-height: 16px;
+  /* CSS custom property for header/amount/line-height */
+  --typography-tokens-headeramountline-height: 24px;
+  /* CSS custom property for header/button/line-height */
+  --typography-tokens-headerbuttonline-height: 19px;
+  /* CSS custom property for header/badge/line-height */
+  --typography-tokens-headerbadgeline-height: 16px;
+  /* CSS custom property for paragraph/md/bold/line-height */
+  --typography-tokens-paragraphmdboldline-height: 18px;
+  /* CSS custom property for paragraph/md/regular/line-height */
+  --typography-tokens-paragraphmdregularline-height: 18px;
+  /* CSS custom property for paragraph/sm/bold/line-height */
+  --typography-tokens-paragraphsmboldline-height: 15px;
+  /* CSS custom property for paragraph/sm/regular/line-height */
+  --typography-tokens-paragraphsmregularline-height: 15px;
+  /* CSS custom property for paragraph/xs/bold/line-height */
+  --typography-tokens-paragraphxsboldline-height: 16px;
+  /* CSS custom property for paragraph/xs/regular/line-height */
+  --typography-tokens-paragraphxsregularline-height: 16px;
+  /* CSS custom property for size/idle/size */
+  --typography-tokens-sizeidlesize: 17px;
+  /* CSS custom property for size/idle/weight */
+  --typography-tokens-sizeidleweight: 400px;
+  /* CSS custom property for size/idle/line-height */
+  --typography-tokens-sizeidleline-height: 20px;
+  /* CSS custom property for size/selected/size */
+  --typography-tokens-sizeselectedsize: 17px;
+  /* CSS custom property for size/selected/weight */
+  --typography-tokens-sizeselectedweight: 700px;
+  /* CSS custom property for size/selected/line-height */
+  --typography-tokens-sizeselectedline-height: 20px;
+  /* CSS custom property for fontFamily/header */
+  --typography-tokens-fontfamilyheader: Speedee App;
+  /* CSS custom property for fontFamily/paragraph */
+  --typography-tokens-fontfamilyparagraph: Speedee App;
+}
+
+/* Button */
+/* CSS custom properties for Button */
+:root {
+  /* CSS custom property for primary/default/bg */
+  --button-primarydefaultbg: rgb(255, 188, 13);
+  /* CSS custom property for primary/hover/bg */
+  --button-primaryhoverbg: rgb(192, 139, 0);
+  /* CSS custom property for primary/disabled/bg */
+  --button-primarydisabledbg: rgb(251, 228, 167);
+  /* CSS custom property for primary/disabled/fg */
+  --button-primarydisabledfg: rgb(111, 111, 111);
+  /* CSS custom property for primary/fg-default */
+  --button-primaryfg-default: rgb(41, 41, 41);
+  /* CSS custom property for secondary/bg-default */
+  --button-secondarybg-default: rgb(255, 255, 255);
+  /* CSS custom property for secondary/fg-default */
+  --button-secondaryfg-default: rgb(41, 41, 41);
+  /* CSS custom property for secondary/hover/bg */
+  --button-secondaryhoverbg: rgb(214, 214, 214);
+  /* CSS custom property for secondary/disabled/bg */
+  --button-secondarydisabledbg: rgb(214, 214, 214);
+  /* CSS custom property for secondary/disabled/fg */
+  --button-secondarydisabledfg: rgb(111, 111, 111);
+  /* CSS custom property for primary/stroke */
+  --button-primarystroke: rgba(41, 41, 41, 0.20000000298023224);
+  /* CSS custom property for secondary/stroke */
+  --button-secondarystroke: rgb(111, 111, 111);
+}
+
