@@ -10,6 +10,9 @@ on:
 jobs:
   process-tokens:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     
     steps:
     - name: Checkout repository
@@ -54,5 +57,5 @@ jobs:
         else
           git add .
           git commit -m "Update design tokens [skip ci]"
-          git push
+          git push origin HEAD:main
         fi
