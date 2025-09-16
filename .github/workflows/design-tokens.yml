@@ -1,0 +1,58 @@
+name: Design Tokens Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  process-tokens:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Copy tokens to root directory
+      run: |
+        # Copy the tokens.json file to the root directory to make it visible
+        cp dispatches/tokens.json ./tokens.json
+        
+        # Also create a README for the tokens
+        cat > README.md << 'EOF'
+        # Design Tokens
+        
+        This repository contains design tokens for the project.
+        
+        ## Files
+        
+        - `tokens.json` - The main design tokens file
+        - `dispatches/tokens.json` - Source tokens file
+        
+        ## Usage
+        
+        The tokens are automatically processed and made available in the root directory.
+        EOF
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Check if there are changes to commit
+        if git diff --quiet; then
+          echo "No changes to commit"
+        else
+          git add .
+          git commit -m "Update design tokens [skip ci]"
+          git push
+        fi
