@@ -47,14 +47,37 @@ jobs:
         cat > config/style-dictionary.config.js << 'EOF'
         module.exports = {
           source: ['dispatches/tokens.json'],
+          transform: {
+            'ios/color': {
+              type: 'value',
+              matcher: function(token) {
+                return token.type === 'color';
+              },
+              transformer: function(token) {
+                // iOS uses UIColor format
+                return `UIColor(red: ${token.value}, green: ${token.value}, blue: ${token.value}, alpha: 1.0)`;
+              }
+            },
+            'android/color': {
+              type: 'value',
+              matcher: function(token) {
+                return token.type === 'color';
+              },
+              transformer: function(token) {
+                // Android uses hex format
+                return token.value;
+              }
+            }
+          },
           platforms: {
             ios: {
               transformGroup: 'ios',
+              transforms: ['ios/color'],
               buildPath: 'dist/ios/',
               files: [
                 {
                   destination: 'tokens.json',
-                  format: 'json/flat',
+                  format: 'json/nested',
                   options: {
                     outputReferences: false
                   }
@@ -67,6 +90,7 @@ jobs:
             },
             android: {
               transformGroup: 'android',
+              transforms: ['android/color'],
               buildPath: 'dist/android/',
               files: [
                 {
@@ -120,8 +144,8 @@ jobs:
         
         ## Formats
         
-        - **iOS**: JSON flat format + PLIST for iOS development
-        - **Android**: JSON flat format + XML for Android development
+        - **iOS**: JSON nested format + PLIST for iOS development (UIColor format)
+        - **Android**: JSON flat format + XML for Android development (hex format)
         - **Source Format**: Original plugin format for editing
         
         ## Usage
