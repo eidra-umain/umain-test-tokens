@@ -15,19 +15,19 @@ import AppKit
 /// SpatialSystem tokens.
 /// Usage: `SpatialSystem.l.value`
 public enum SpatialSystem: CGFloat, CaseIterable {
-    /// HorizontalSafeAreaInset - 62.0
-    case horizontalSafeAreaInset = 62.0
+    /// HorizontalSafeAreaInset - 56.0
+    case horizontalSafeAreaInset = 56.0
     /// Large - 16.0
     case large = 16.0
     /// Medium - 12.0
     case medium = 12.0
-    /// ScrollViewBottomPadding - 100.0
+    /// ScrollViewBottomPadding - 80.0
     /// Extra padding at the bottom of scrollview to ensure content never gets hidden behind a floating bar or toast.
-    case scrollViewBottomPadding = 100.0
+    case scrollViewBottomPadding = 80.0
     /// Small - 8.0
     case small = 8.0
-    /// TouchAreaMinimum - 48.0
-    case touchAreaMinimum = 48.0
+    /// TouchAreaMinimum - 44.0
+    case touchAreaMinimum = 44.0
     /// Xlarge - 20.0
     case xlarge = 20.0
     /// Xsmall - 4.0

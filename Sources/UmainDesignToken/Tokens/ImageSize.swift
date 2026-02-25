@@ -15,20 +15,20 @@ import AppKit
 /// ImageSize tokens.
 /// Usage: `ImageSize.l.value`
 public enum ImageSize: CGFloat, CaseIterable {
-    /// L - 152.0
-    case l = 152.0
-    /// M - 128.0
-    case m = 128.0
-    /// S - 96.0
-    case s = 96.0
-    /// Xl - 240.0
-    case xl = 240.0
-    /// Xs - 72.0
-    case xs = 72.0
-    /// Xxl - 375.0
-    case xxl = 375.0
-    /// Xxs - 44.0
-    case xxs = 44.0
+    /// L - 136.0
+    case l = 136.0
+    /// M - 112.0
+    case m = 112.0
+    /// S - 80.0
+    case s = 80.0
+    /// Xl - 200.0
+    case xl = 200.0
+    /// Xs - 64.0
+    case xs = 64.0
+    /// Xxl - 320.0
+    case xxl = 320.0
+    /// Xxs - 40.0
+    case xxs = 40.0
 
     /// Returns the numeric value of the token.
     public var value: CGFloat { rawValue }

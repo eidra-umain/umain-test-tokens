@@ -15,16 +15,16 @@ import AppKit
 /// Adaptive colors that switch between light and dark values.
 /// Usage: Gradientstops.someToken
 public enum Gradientstops: String, CaseIterable {
-    /// FadeprimarybgStop01 - Light: #F9F9F900, Dark: #29292900
+    /// FadeprimarybgStop01 - Light: #F8F8F800, Dark: #26262600
     /// Category: fade-primary-bg
     case FadeprimarybgStop01 = "FadeprimarybgStop01"
-    /// FadesecondarybgStop01 - Light: #FFFFFF00, Dark: #1B1B1B00
+    /// FadesecondarybgStop01 - Light: #FFFFFF00, Dark: #18181800
     /// Category: fade-secondary-bg
     case FadesecondarybgStop01 = "FadesecondarybgStop01"
-    /// FadeprimarybgStop02 - Light: #F9F9F9, Dark: #292929
+    /// FadeprimarybgStop02 - Light: #F8F8F8, Dark: #262626
     /// Category: fade-primary-bg
     case FadeprimarybgStop02 = "FadeprimarybgStop02"
-    /// FadesecondarybgStop02 - Light: #FFFFFF, Dark: #1B1B1B
+    /// FadesecondarybgStop02 - Light: #FFFFFF, Dark: #181818
     /// Category: fade-secondary-bg
     case FadesecondarybgStop02 = "FadesecondarybgStop02"
 }
@@ -36,13 +36,13 @@ public extension UIColor {
             let isDark = (trait.userInterfaceStyle == .dark)
             switch token {
             case .FadeprimarybgStop01:
-                return isDark ? UIColor(hex: "#29292900") : UIColor(hex: "#F9F9F900")
+                return isDark ? UIColor(hex: "#26262600") : UIColor(hex: "#F8F8F800")
             case .FadesecondarybgStop01:
-                return isDark ? UIColor(hex: "#1B1B1B00") : UIColor(hex: "#FFFFFF00")
+                return isDark ? UIColor(hex: "#18181800") : UIColor(hex: "#FFFFFF00")
             case .FadeprimarybgStop02:
-                return isDark ? UIColor(hex: "#292929") : UIColor(hex: "#F9F9F9")
+                return isDark ? UIColor(hex: "#262626") : UIColor(hex: "#F8F8F8")
             case .FadesecondarybgStop02:
-                return isDark ? UIColor(hex: "#1B1B1B") : UIColor(hex: "#FFFFFF")
+                return isDark ? UIColor(hex: "#181818") : UIColor(hex: "#FFFFFF")
             }
         }
     }

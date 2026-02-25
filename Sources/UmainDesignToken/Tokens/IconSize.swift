@@ -15,16 +15,16 @@ import AppKit
 /// IconSize tokens.
 /// Usage: `IconSize.l.value`
 public enum IconSize: CGFloat, CaseIterable {
-    /// L - 32.0
-    case l = 32.0
-    /// M - 24.0
-    case m = 24.0
-    /// S - 20.0
-    case s = 20.0
-    /// Xs - 16.0
-    case xs = 16.0
-    /// Xxs - 12.0
-    case xxs = 12.0
+    /// L - 28.0
+    case l = 28.0
+    /// M - 20.0
+    case m = 20.0
+    /// S - 18.0
+    case s = 18.0
+    /// Xs - 14.0
+    case xs = 14.0
+    /// Xxs - 10.0
+    case xxs = 10.0
 
     /// Returns the numeric value of the token.
     public var value: CGFloat { rawValue }

@@ -15,22 +15,22 @@ import AppKit
 /// CornerRadius tokens.
 /// Usage: `CornerRadius.l.value`
 public enum CornerRadius: CGFloat, CaseIterable {
-    /// Infinity - 2400.0
-    case infinity = 2400.0
-    /// L - 12.0
-    case l = 12.0
-    /// M - 8.0
-    case m = 8.0
-    /// S - 4.0
-    case s = 4.0
-    /// Xl - 16.0
-    case xl = 16.0
+    /// Infinity - 999.0
+    case infinity = 999.0
+    /// L - 10.0
+    case l = 10.0
+    /// M - 6.0
+    case m = 6.0
+    /// S - 3.0
+    case s = 3.0
+    /// Xl - 14.0
+    case xl = 14.0
     /// Xs - 2.0
     case xs = 2.0
-    /// Xxl - 24.0
-    case xxl = 24.0
-    /// Xxxl - 40.0
-    case xxxl = 40.0
+    /// Xxl - 20.0
+    case xxl = 20.0
+    /// Xxxl - 32.0
+    case xxxl = 32.0
 
     /// Returns the numeric value of the token.
     public var value: CGFloat { rawValue }

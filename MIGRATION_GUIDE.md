@@ -270,44 +270,7 @@ Image(systemName: "star")
 
 ---
 
-### 6. Device & Orientation
-
-**Old (DesignStyle/DS/LandscapeSizes.swift):**
-```swift
-// Check LandscapeSizes implementation
-```
-
-**New (UmainTokensSPM):**
-```swift
-enum Portrait {
-    case maxColumnWidth
-    case hSafeAreaInset
-    case maxDealCardWidth
-    // ... more
-}
-
-enum Landscape {
-    case maxColumnWidth
-    case hSafeAreaInset
-    case maxDealCardWidth
-    // ... more
-}
-
-enum TabletPortrait { ... }
-enum TabletLandscape { ... }
-
-// Usage
-Portrait.maxColumnWidth.value
-Landscape.hSafeAreaInset.value
-```
-
-**Migration:**
-- Old `LandscapeSizes` → New `Portrait`, `Landscape`, `TabletPortrait`, `TabletLandscape` enums
-- Check available properties in each enum
-
----
-
-### 7. Gradients
+### 6. Gradients
 
 **Old (DesignStyle/Gradients.swift):**
 ```swift

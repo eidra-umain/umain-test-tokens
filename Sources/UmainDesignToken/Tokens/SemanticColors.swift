@@ -15,109 +15,109 @@ import AppKit
 /// Adaptive colors that switch between light and dark values.
 /// Usage: SemanticColors.someToken
 public enum SemanticColors: String, CaseIterable {
-    /// Accent - Light: #FFFFFF, Dark: #292929
+    /// Accent - Light: #FFFFFF, Dark: #262626
     /// Category: bg
     case accent = "accent"
-    /// AccentAccessible - Light: #C08B00, Dark: #FFBC0D
+    /// AccentAccessible - Light: #B08000, Dark: #FFAA00
     /// Category: fg
     case accentAccessible = "accentAccessible"
-    /// Accent1 - Light: #9A0A4D, Dark: #FF8FC3
+    /// Accent1 - Light: #920847, Dark: #FF7DB8
     /// Category: fg
     case accent1 = "accent1"
-    /// Accent2 - Light: #BE5100, Dark: #FFF9F5
+    /// Accent2 - Light: #B24C00, Dark: #FFF8F3
     /// Category: fg
     case accent2 = "accent2"
-    /// Accent3 - Light: #EF8849, Dark: #EF8849
+    /// Accent3 - Light: #ED7F42, Dark: #ED7F42
     /// Category: fg
     case accent3 = "accent3"
-    /// Active - Light: #292929, Dark: #FFFFFF
+    /// Active - Light: #262626, Dark: #FFFFFF
     /// Category: stroke
     case active = "active"
-    /// BgBrand - Light: #FFBC0D, Dark: #FFBC0D
+    /// BgBrand - Light: #FFAA00, Dark: #FFAA00
     /// Category: bg
     case BgBrand = "BgBrand"
-    /// StrokeBrand - Light: #FFBC0D, Dark: #FFBC0D
+    /// StrokeBrand - Light: #FFAA00, Dark: #FFAA00
     /// Category: stroke
     case StrokeBrand = "StrokeBrand"
-    /// ColorOnBrand - Light: #292929, Dark: #292929
+    /// ColorOnBrand - Light: #262626, Dark: #262626
     /// Category: fg
     case colorOnBrand = "colorOnBrand"
-    /// Divider - Light: #D6D6D6, Dark: #6F6F6F
+    /// Divider - Light: #D4D4D4, Dark: #6D6D6D
     /// Category: fg
     case divider = "divider"
-    /// BgError - Light: #FDF2F2, Dark: #FD686D4D
+    /// BgError - Light: #FEF3F3, Dark: #FC5C624D
     /// Category: bg
     case BgError = "BgError"
-    /// FgError - Light: #DB0007, Dark: #FDF2F2
+    /// FgError - Light: #CC0008, Dark: #FEF3F3
     /// Category: fg
     case FgError = "FgError"
-    /// StrokeError - Light: #DB0007, Dark: #FD686D
+    /// StrokeError - Light: #CC0008, Dark: #FC5C62
     /// Category: stroke
     case StrokeError = "StrokeError"
-    /// BgInverted - Light: #292929, Dark: #FFFFFF
+    /// BgInverted - Light: #262626, Dark: #FFFFFF
     /// Category: bg
     case BgInverted = "BgInverted"
-    /// FgInverted - Light: #FFFFFF, Dark: #292929
+    /// FgInverted - Light: #FFFFFF, Dark: #262626
     /// Category: fg
     case FgInverted = "FgInverted"
-    /// Link - Light: #006BAE, Dark: #4DBBFF
+    /// Link - Light: #005FA3, Dark: #3DB5FF
     /// Category: fg
     case link = "link"
-    /// BgPrimary - Light: #F9F9F9, Dark: #292929
+    /// BgPrimary - Light: #F8F8F8, Dark: #262626
     /// Category: bg
     case BgPrimary = "BgPrimary"
-    /// FgPrimary - Light: #292929, Dark: #FFFFFF
+    /// FgPrimary - Light: #262626, Dark: #FFFFFF
     /// Category: fg
     case FgPrimary = "FgPrimary"
-    /// StrokePrimary - Light: #29292933, Dark: #FFFFFF33
+    /// StrokePrimary - Light: #26262633, Dark: #FFFFFF33
     /// Category: stroke
     case StrokePrimary = "StrokePrimary"
-    /// PrimaryDisabled - Light: #FBE4A7, Dark: #FBE4A7
+    /// PrimaryDisabled - Light: #FCE8B0, Dark: #FCE8B0
     /// It is used only in design to visualize element state backgrounds
     /// Category: interactive
     case primaryDisabled = "primaryDisabled"
-    /// PrimaryPressed - Light: #C08B00, Dark: #C08B00
+    /// PrimaryPressed - Light: #B08000, Dark: #B08000
     /// It is used only in design to visualize element state backgrounds
     /// Category: interactive
     case primaryPressed = "primaryPressed"
-    /// Quaternary - Light: #D6D6D6, Dark: #6F6F6F
+    /// Quaternary - Light: #D4D4D4, Dark: #6D6D6D
     /// Category: fg
     case quaternary = "quaternary"
-    /// BgSecondary - Light: #FFFFFF, Dark: #1B1B1B
+    /// BgSecondary - Light: #FFFFFF, Dark: #181818
     /// Category: bg
     case BgSecondary = "BgSecondary"
-    /// FgSecondary - Light: #6F6F6F, Dark: #D6D6D6
+    /// FgSecondary - Light: #6D6D6D, Dark: #D4D4D4
     /// Category: fg
     case FgSecondary = "FgSecondary"
-    /// StrokeSecondary - Light: #6F6F6F, Dark: #F3F3F3
+    /// StrokeSecondary - Light: #6D6D6D, Dark: #F2F2F2
     /// Category: stroke
     case StrokeSecondary = "StrokeSecondary"
-    /// SecondaryPressed - Light: #D6D6D6, Dark: #6F6F6F
+    /// SecondaryPressed - Light: #D4D4D4, Dark: #6D6D6D
     /// It is used only in design to visualize element state backgrounds
     /// Category: interactive
     case secondaryPressed = "secondaryPressed"
-    /// BgSuccess - Light: #F4F7F5, Dark: #54B0774D
+    /// BgSuccess - Light: #F2F6F3, Dark: #4DAE6E4D
     /// Category: bg
     case BgSuccess = "BgSuccess"
-    /// FgSuccess - Light: #264F36, Dark: #54B077
+    /// FgSuccess - Light: #224830, Dark: #4DAE6E
     /// Category: fg
     case FgSuccess = "FgSuccess"
-    /// StrokeSuccess - Light: #264F36, Dark: #54B077
+    /// StrokeSuccess - Light: #224830, Dark: #4DAE6E
     /// Category: stroke
     case StrokeSuccess = "StrokeSuccess"
-    /// BgTertiary - Light: #F3F3F3, Dark: #3D3D3D
+    /// BgTertiary - Light: #F2F2F2, Dark: #3A3A3A
     /// Category: bg
     case BgTertiary = "BgTertiary"
-    /// FgTertiary - Light: #ADADAD, Dark: #959595
+    /// FgTertiary - Light: #ABABAB, Dark: #939393
     /// Category: fg
     case FgTertiary = "FgTertiary"
-    /// StrokeTertiary - Light: #D6D6D6, Dark: #6F6F6F
+    /// StrokeTertiary - Light: #D4D4D4, Dark: #6D6D6D
     /// Category: stroke
     case StrokeTertiary = "StrokeTertiary"
-    /// BgWarning - Light: #FFF9F5, Dark: #EF88494D
+    /// BgWarning - Light: #FFF8F3, Dark: #ED7F424D
     /// Category: bg
     case BgWarning = "BgWarning"
-    /// StrokeWarning - Light: #BE5100, Dark: #EF8849
+    /// StrokeWarning - Light: #B24C00, Dark: #ED7F42
     /// Category: stroke
     case StrokeWarning = "StrokeWarning"
 }
@@ -181,73 +181,73 @@ public extension UIColor {
             let isDark = (trait.userInterfaceStyle == .dark)
             switch token {
             case .accent:
-                return isDark ? UIColor(hex: "#292929") : UIColor(hex: "#FFFFFF")
+                return isDark ? UIColor(hex: "#262626") : UIColor(hex: "#FFFFFF")
             case .accentAccessible:
-                return isDark ? UIColor(hex: "#FFBC0D") : UIColor(hex: "#C08B00")
+                return isDark ? UIColor(hex: "#FFAA00") : UIColor(hex: "#B08000")
             case .accent1:
-                return isDark ? UIColor(hex: "#FF8FC3") : UIColor(hex: "#9A0A4D")
+                return isDark ? UIColor(hex: "#FF7DB8") : UIColor(hex: "#920847")
             case .accent2:
-                return isDark ? UIColor(hex: "#FFF9F5") : UIColor(hex: "#BE5100")
+                return isDark ? UIColor(hex: "#FFF8F3") : UIColor(hex: "#B24C00")
             case .accent3:
-                return isDark ? UIColor(hex: "#EF8849") : UIColor(hex: "#EF8849")
+                return isDark ? UIColor(hex: "#ED7F42") : UIColor(hex: "#ED7F42")
             case .active:
-                return isDark ? UIColor(hex: "#FFFFFF") : UIColor(hex: "#292929")
+                return isDark ? UIColor(hex: "#FFFFFF") : UIColor(hex: "#262626")
             case .BgBrand:
-                return isDark ? UIColor(hex: "#FFBC0D") : UIColor(hex: "#FFBC0D")
+                return isDark ? UIColor(hex: "#FFAA00") : UIColor(hex: "#FFAA00")
             case .StrokeBrand:
-                return isDark ? UIColor(hex: "#FFBC0D") : UIColor(hex: "#FFBC0D")
+                return isDark ? UIColor(hex: "#FFAA00") : UIColor(hex: "#FFAA00")
             case .colorOnBrand:
-                return isDark ? UIColor(hex: "#292929") : UIColor(hex: "#292929")
+                return isDark ? UIColor(hex: "#262626") : UIColor(hex: "#262626")
             case .divider:
-                return isDark ? UIColor(hex: "#6F6F6F") : UIColor(hex: "#D6D6D6")
+                return isDark ? UIColor(hex: "#6D6D6D") : UIColor(hex: "#D4D4D4")
             case .BgError:
-                return isDark ? UIColor(hex: "#FD686D4D") : UIColor(hex: "#FDF2F2")
+                return isDark ? UIColor(hex: "#FC5C624D") : UIColor(hex: "#FEF3F3")
             case .FgError:
-                return isDark ? UIColor(hex: "#FDF2F2") : UIColor(hex: "#DB0007")
+                return isDark ? UIColor(hex: "#FEF3F3") : UIColor(hex: "#CC0008")
             case .StrokeError:
-                return isDark ? UIColor(hex: "#FD686D") : UIColor(hex: "#DB0007")
+                return isDark ? UIColor(hex: "#FC5C62") : UIColor(hex: "#CC0008")
             case .BgInverted:
-                return isDark ? UIColor(hex: "#FFFFFF") : UIColor(hex: "#292929")
+                return isDark ? UIColor(hex: "#FFFFFF") : UIColor(hex: "#262626")
             case .FgInverted:
-                return isDark ? UIColor(hex: "#292929") : UIColor(hex: "#FFFFFF")
+                return isDark ? UIColor(hex: "#262626") : UIColor(hex: "#FFFFFF")
             case .link:
-                return isDark ? UIColor(hex: "#4DBBFF") : UIColor(hex: "#006BAE")
+                return isDark ? UIColor(hex: "#3DB5FF") : UIColor(hex: "#005FA3")
             case .BgPrimary:
-                return isDark ? UIColor(hex: "#292929") : UIColor(hex: "#F9F9F9")
+                return isDark ? UIColor(hex: "#262626") : UIColor(hex: "#F8F8F8")
             case .FgPrimary:
-                return isDark ? UIColor(hex: "#FFFFFF") : UIColor(hex: "#292929")
+                return isDark ? UIColor(hex: "#FFFFFF") : UIColor(hex: "#262626")
             case .StrokePrimary:
-                return isDark ? UIColor(hex: "#FFFFFF33") : UIColor(hex: "#29292933")
+                return isDark ? UIColor(hex: "#FFFFFF33") : UIColor(hex: "#26262633")
             case .primaryDisabled:
-                return isDark ? UIColor(hex: "#FBE4A7") : UIColor(hex: "#FBE4A7")
+                return isDark ? UIColor(hex: "#FCE8B0") : UIColor(hex: "#FCE8B0")
             case .primaryPressed:
-                return isDark ? UIColor(hex: "#C08B00") : UIColor(hex: "#C08B00")
+                return isDark ? UIColor(hex: "#B08000") : UIColor(hex: "#B08000")
             case .quaternary:
-                return isDark ? UIColor(hex: "#6F6F6F") : UIColor(hex: "#D6D6D6")
+                return isDark ? UIColor(hex: "#6D6D6D") : UIColor(hex: "#D4D4D4")
             case .BgSecondary:
-                return isDark ? UIColor(hex: "#1B1B1B") : UIColor(hex: "#FFFFFF")
+                return isDark ? UIColor(hex: "#181818") : UIColor(hex: "#FFFFFF")
             case .FgSecondary:
-                return isDark ? UIColor(hex: "#D6D6D6") : UIColor(hex: "#6F6F6F")
+                return isDark ? UIColor(hex: "#D4D4D4") : UIColor(hex: "#6D6D6D")
             case .StrokeSecondary:
-                return isDark ? UIColor(hex: "#F3F3F3") : UIColor(hex: "#6F6F6F")
+                return isDark ? UIColor(hex: "#F2F2F2") : UIColor(hex: "#6D6D6D")
             case .secondaryPressed:
-                return isDark ? UIColor(hex: "#6F6F6F") : UIColor(hex: "#D6D6D6")
+                return isDark ? UIColor(hex: "#6D6D6D") : UIColor(hex: "#D4D4D4")
             case .BgSuccess:
-                return isDark ? UIColor(hex: "#54B0774D") : UIColor(hex: "#F4F7F5")
+                return isDark ? UIColor(hex: "#4DAE6E4D") : UIColor(hex: "#F2F6F3")
             case .FgSuccess:
-                return isDark ? UIColor(hex: "#54B077") : UIColor(hex: "#264F36")
+                return isDark ? UIColor(hex: "#4DAE6E") : UIColor(hex: "#224830")
             case .StrokeSuccess:
-                return isDark ? UIColor(hex: "#54B077") : UIColor(hex: "#264F36")
+                return isDark ? UIColor(hex: "#4DAE6E") : UIColor(hex: "#224830")
             case .BgTertiary:
-                return isDark ? UIColor(hex: "#3D3D3D") : UIColor(hex: "#F3F3F3")
+                return isDark ? UIColor(hex: "#3A3A3A") : UIColor(hex: "#F2F2F2")
             case .FgTertiary:
-                return isDark ? UIColor(hex: "#959595") : UIColor(hex: "#ADADAD")
+                return isDark ? UIColor(hex: "#939393") : UIColor(hex: "#ABABAB")
             case .StrokeTertiary:
-                return isDark ? UIColor(hex: "#6F6F6F") : UIColor(hex: "#D6D6D6")
+                return isDark ? UIColor(hex: "#6D6D6D") : UIColor(hex: "#D4D4D4")
             case .BgWarning:
-                return isDark ? UIColor(hex: "#EF88494D") : UIColor(hex: "#FFF9F5")
+                return isDark ? UIColor(hex: "#ED7F424D") : UIColor(hex: "#FFF8F3")
             case .StrokeWarning:
-                return isDark ? UIColor(hex: "#EF8849") : UIColor(hex: "#BE5100")
+                return isDark ? UIColor(hex: "#ED7F42") : UIColor(hex: "#B24C00")
             }
         }
     }

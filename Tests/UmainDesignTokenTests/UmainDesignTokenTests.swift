@@ -16,9 +16,9 @@ final class UmainDesignTokenTests: XCTestCase {
     }
 
     func testCornerRadiusKnownValues() {
-        XCTAssertEqual(CornerRadius.s.value, 4.0)
-        XCTAssertEqual(CornerRadius.m.value, 8.0)
-        XCTAssertEqual(CornerRadius.l.value, 12.0)
+        XCTAssertEqual(CornerRadius.s.value, 3.0)
+        XCTAssertEqual(CornerRadius.m.value, 6.0)
+        XCTAssertEqual(CornerRadius.l.value, 10.0)
     }
 
     // MARK: - IconSize
@@ -34,9 +34,9 @@ final class UmainDesignTokenTests: XCTestCase {
     }
 
     func testIconSizeKnownValues() {
-        XCTAssertEqual(IconSize.s.value, 20.0)
-        XCTAssertEqual(IconSize.m.value, 24.0)
-        XCTAssertEqual(IconSize.l.value, 32.0)
+        XCTAssertEqual(IconSize.s.value, 18.0)
+        XCTAssertEqual(IconSize.m.value, 20.0)
+        XCTAssertEqual(IconSize.l.value, 28.0)
     }
 
     // MARK: - ImageSize
@@ -112,16 +112,6 @@ final class UmainDesignTokenTests: XCTestCase {
 
     func testEffectsElevationHasCases() {
         XCTAssertFalse(EffectsElevation.allCases.isEmpty, "EffectsElevation should have at least one case")
-    }
-
-    // MARK: - DeviceAndOrientation
-
-    func testPortraitHasCases() {
-        XCTAssertFalse(Portrait.allCases.isEmpty, "Portrait should have at least one case")
-    }
-
-    func testLandscapeHasCases() {
-        XCTAssertFalse(Landscape.allCases.isEmpty, "Landscape should have at least one case")
     }
 
     // MARK: - Spacing

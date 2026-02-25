@@ -68,103 +68,103 @@ extension UIColor {
 /// Palette tokens.
 /// Usage: Palette.someToken.value
 public enum Palette: CaseIterable {
-    /// Gold100 - #FBE4A7
+    /// Gold100 - #FCE8B0
     /// Category: Value/UI Palette/Gold
     case gold100
-    /// Green100 - #F4F7F5
+    /// Green100 - #F2F6F3
     /// Category: Value/UI Palette/Green
     case green100
-    /// Greyscale100 - #F9F9F9
+    /// Greyscale100 - #F8F8F8
     /// Category: Value/UI Palette/Greyscale
     case greyscale100
-    /// Orange100 - #FFF9F5
+    /// Orange100 - #FFF8F3
     /// Category: Value/UI Palette/Orange
     case orange100
-    /// Red100 - #FDF2F2
+    /// Red100 - #FEF3F3
     /// Category: Value/UI Palette/Red
     case red100
-    /// Greyscale10000 - #F9F9F900
+    /// Greyscale10000 - #F8F8F800
     /// Category: Value/UI Palette/Greyscale
     case greyscale10000
-    /// Greyscale200 - #F3F3F3
+    /// Greyscale200 - #F2F2F2
     /// Category: Value/UI Palette/Greyscale
     case greyscale200
-    /// Blue300 - #4DBBFF
+    /// Blue300 - #3DB5FF
     /// Category: Value/UI Palette/Blue
     case blue300
-    /// Fuchsia300 - #FF8FC3
+    /// Fuchsia300 - #FF7DB8
     /// Category: Value/UI Palette/Fuchsia
     case fuchsia300
-    /// Greyscale300 - #D6D6D6
+    /// Greyscale300 - #D4D4D4
     /// Category: Value/UI Palette/Greyscale
     case greyscale300
-    /// Gold400 - #FFBC0D
+    /// Gold400 - #FFAA00
     /// Category: Value/UI Palette/Gold
     case gold400
-    /// Green400 - #54B077
+    /// Green400 - #4DAE6E
     /// Category: Value/UI Palette/Green
     case green400
-    /// Greyscale400 - #ADADAD
+    /// Greyscale400 - #ABABAB
     /// Category: Value/UI Palette/Greyscale
     case greyscale400
-    /// Orange400 - #EF8849
+    /// Orange400 - #ED7F42
     /// Category: Value/UI Palette/Orange
     case orange400
-    /// Red400 - #FD686D
+    /// Red400 - #FC5C62
     /// Category: Value/UI Palette/Red
     case red400
-    /// Green40030 - #54B0774D
+    /// Green40030 - #4DAE6E4D
     /// Category: Value/UI Palette/Green
     case green40030
-    /// Orange40030 - #EF88494D
+    /// Orange40030 - #ED7F424D
     /// Category: Value/UI Palette/Orange
     case orange40030
-    /// Red40030 - #FD686D4D
+    /// Red40030 - #FC5C624D
     /// Category: Value/UI Palette/Red
     case red40030
-    /// Greyscale500 - #959595
+    /// Greyscale500 - #939393
     /// Category: Value/UI Palette/Greyscale
     case greyscale500
-    /// Greyscale600 - #6F6F6F
+    /// Greyscale600 - #6D6D6D
     /// Category: Value/UI Palette/Greyscale
     case greyscale600
-    /// Blue700 - #006BAE
+    /// Blue700 - #005FA3
     /// Category: Value/UI Palette/Blue
     case blue700
-    /// Fuchsia700 - #9A0A4D
+    /// Fuchsia700 - #920847
     /// Category: Value/UI Palette/Fuchsia
     case fuchsia700
-    /// Gold700 - #C08B00
+    /// Gold700 - #B08000
     /// Category: Value/UI Palette/Gold
     case gold700
-    /// Green700 - #264F36
+    /// Green700 - #224830
     /// Category: Value/UI Palette/Green
     case green700
-    /// Greyscale700 - #3D3D3D
+    /// Greyscale700 - #3A3A3A
     /// Category: Value/UI Palette/Greyscale
     case greyscale700
-    /// Orange700 - #BE5100
+    /// Orange700 - #B24C00
     /// Category: Value/UI Palette/Orange
     case orange700
-    /// Red700 - #DB0007
+    /// Red700 - #CC0008
     /// Category: Value/UI Palette/Red
     case red700
-    /// Greyscale800 - #292929
+    /// Greyscale800 - #262626
     /// Category: Value/UI Palette/Greyscale
     case greyscale800
-    /// Greyscale80000 - #29292900
+    /// Greyscale80000 - #26262600
     /// Category: Value/UI Palette/Greyscale
     case greyscale80000
-    /// Greyscale80015 - #29292926
+    /// Greyscale80015 - #26262626
     /// Category: Value/UI Palette/Greyscale
     case greyscale80015
-    /// Greyscale80020 - #29292933
+    /// Greyscale80020 - #26262633
     /// Category: Value/UI Palette/Greyscale
     case greyscale80020
-    /// Greyscale900 - #1B1B1B
+    /// Greyscale900 - #181818
     /// Category: Value/UI Palette/Greyscale
     case greyscale900
-    /// Greyscale90000 - #1B1B1B00
+    /// Greyscale90000 - #18181800
     /// Category: Value/UI Palette/Greyscale
     case greyscale90000
     /// White - #FFFFFF
@@ -183,71 +183,71 @@ public enum Palette: CaseIterable {
     public var value: Color {
         switch self {
         case .gold100:
-            return Color(hex: "#FBE4A7")
+            return Color(hex: "#FCE8B0")
         case .green100:
-            return Color(hex: "#F4F7F5")
+            return Color(hex: "#F2F6F3")
         case .greyscale100:
-            return Color(hex: "#F9F9F9")
+            return Color(hex: "#F8F8F8")
         case .orange100:
-            return Color(hex: "#FFF9F5")
+            return Color(hex: "#FFF8F3")
         case .red100:
-            return Color(hex: "#FDF2F2")
+            return Color(hex: "#FEF3F3")
         case .greyscale10000:
-            return Color(hex: "#F9F9F900")
+            return Color(hex: "#F8F8F800")
         case .greyscale200:
-            return Color(hex: "#F3F3F3")
+            return Color(hex: "#F2F2F2")
         case .blue300:
-            return Color(hex: "#4DBBFF")
+            return Color(hex: "#3DB5FF")
         case .fuchsia300:
-            return Color(hex: "#FF8FC3")
+            return Color(hex: "#FF7DB8")
         case .greyscale300:
-            return Color(hex: "#D6D6D6")
+            return Color(hex: "#D4D4D4")
         case .gold400:
-            return Color(hex: "#FFBC0D")
+            return Color(hex: "#FFAA00")
         case .green400:
-            return Color(hex: "#54B077")
+            return Color(hex: "#4DAE6E")
         case .greyscale400:
-            return Color(hex: "#ADADAD")
+            return Color(hex: "#ABABAB")
         case .orange400:
-            return Color(hex: "#EF8849")
+            return Color(hex: "#ED7F42")
         case .red400:
-            return Color(hex: "#FD686D")
+            return Color(hex: "#FC5C62")
         case .green40030:
-            return Color(hex: "#54B0774D")
+            return Color(hex: "#4DAE6E4D")
         case .orange40030:
-            return Color(hex: "#EF88494D")
+            return Color(hex: "#ED7F424D")
         case .red40030:
-            return Color(hex: "#FD686D4D")
+            return Color(hex: "#FC5C624D")
         case .greyscale500:
-            return Color(hex: "#959595")
+            return Color(hex: "#939393")
         case .greyscale600:
-            return Color(hex: "#6F6F6F")
+            return Color(hex: "#6D6D6D")
         case .blue700:
-            return Color(hex: "#006BAE")
+            return Color(hex: "#005FA3")
         case .fuchsia700:
-            return Color(hex: "#9A0A4D")
+            return Color(hex: "#920847")
         case .gold700:
-            return Color(hex: "#C08B00")
+            return Color(hex: "#B08000")
         case .green700:
-            return Color(hex: "#264F36")
+            return Color(hex: "#224830")
         case .greyscale700:
-            return Color(hex: "#3D3D3D")
+            return Color(hex: "#3A3A3A")
         case .orange700:
-            return Color(hex: "#BE5100")
+            return Color(hex: "#B24C00")
         case .red700:
-            return Color(hex: "#DB0007")
+            return Color(hex: "#CC0008")
         case .greyscale800:
-            return Color(hex: "#292929")
+            return Color(hex: "#262626")
         case .greyscale80000:
-            return Color(hex: "#29292900")
+            return Color(hex: "#26262600")
         case .greyscale80015:
-            return Color(hex: "#29292926")
+            return Color(hex: "#26262626")
         case .greyscale80020:
-            return Color(hex: "#29292933")
+            return Color(hex: "#26262633")
         case .greyscale900:
-            return Color(hex: "#1B1B1B")
+            return Color(hex: "#181818")
         case .greyscale90000:
-            return Color(hex: "#1B1B1B00")
+            return Color(hex: "#18181800")
         case .white:
             return Color(hex: "#FFFFFF")
         case .white00:

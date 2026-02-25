@@ -46,7 +46,7 @@ public enum Spacing: CaseIterable {
 
     /// Horizontalsafeareainset
     /// Category: 
-    public static let horizontalSafeAreaInset: Spacing = .horizontalSafeAreaInset(62.0)
+    public static let horizontalSafeAreaInset: Spacing = .horizontalSafeAreaInset(56.0)
 
     /// Large
     /// Category: 
@@ -59,7 +59,7 @@ public enum Spacing: CaseIterable {
     /// Scrollviewbottompadding
     /// Extra padding at the bottom of scrollview to ensure content never gets hidden behind a floating bar or toast.
     /// Category: 
-    public static let scrollViewBottomPadding: Spacing = .scrollViewBottomPadding(100.0)
+    public static let scrollViewBottomPadding: Spacing = .scrollViewBottomPadding(80.0)
 
     /// Small
     /// Category: 
@@ -67,7 +67,7 @@ public enum Spacing: CaseIterable {
 
     /// Touchareaminimum
     /// Category: 
-    public static let touchAreaMinimum: Spacing = .touchAreaMinimum(48.0)
+    public static let touchAreaMinimum: Spacing = .touchAreaMinimum(44.0)
 
     /// Xlarge
     /// Category: 

@@ -26,7 +26,7 @@ jobs:
       - name: Validate token files
         run: |
           echo "🔍 Validating token file structure..."
-          EXPECTED_FILES=("CornerRadius.swift" "SemanticColors.swift" "Palette.swift" "Spacing.swift" "TypographySizes.swift" "IconSize.swift" "ImageSize.swift" "SpatialSystem.swift" "DeviceAndOrientation.swift" "EffectsElevation.swift" "Gradientstops.swift")
+          EXPECTED_FILES=("CornerRadius.swift" "SemanticColors.swift" "Palette.swift" "Spacing.swift" "TypographySizes.swift" "IconSize.swift" "ImageSize.swift" "SpatialSystem.swift" "EffectsElevation.swift" "Gradientstops.swift")
           TOKENS_DIR="Sources/UmainDesignToken/Tokens"
           MISSING=0
 

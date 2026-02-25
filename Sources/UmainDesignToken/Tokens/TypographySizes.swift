@@ -59,130 +59,130 @@ public enum Typography: CaseIterable {
 
 private let typographyData: [Typography: TypographyStyle] = [
     .amount: .init(
-        fontName: "SpeedeeApp-Regular",
-        size: 20.0,
-        lineHeight: 24.0,
+        fontName: "YourFont-Regular",
+        size: 18.0,
+        lineHeight: 22.0,
         letterSpacingPercent: 0.0
     ),
     .badge: .init(
-        fontName: "SpeedeeApp-Bold",
+        fontName: "YourFont-Bold",
         size: 12.0,
         lineHeight: 16.0,
         letterSpacingPercent: 0.0
     ),
     .button: .init(
-        fontName: "SpeedeeApp-Regular",
-        size: 16.0,
-        lineHeight: 19.0,
+        fontName: "YourFont-Regular",
+        size: 15.0,
+        lineHeight: 18.0,
         letterSpacingPercent: 0.0
     ),
     .h0: .init(
-        fontName: "SpeedeeApp-Bold",
-        size: 56.0,
-        lineHeight: 62.0,
-        letterSpacingPercent: -1.7857142857142856
+        fontName: "YourFont-Bold",
+        size: 52.0,
+        lineHeight: 58.0,
+        letterSpacingPercent: -1.75
     ),
     .h1: .init(
-        fontName: "SpeedeeApp-Bold",
-        size: 32.0,
-        lineHeight: 35.0,
-        letterSpacingPercent: -1.875000074505806
+        fontName: "YourFont-Bold",
+        size: 30.0,
+        lineHeight: 33.0,
+        letterSpacingPercent: -1.85
     ),
     .h2: .init(
-        fontName: "SpeedeeApp-Bold",
-        size: 24.0,
-        lineHeight: 26.0,
-        letterSpacingPercent: -2.083333333333333
+        fontName: "YourFont-Bold",
+        size: 22.0,
+        lineHeight: 22.0,
+        letterSpacingPercent: -2.0
     ),
     .h3: .init(
-        fontName: "SpeedeeApp-Bold",
-        size: 17.0,
-        lineHeight: 19.0,
-        letterSpacingPercent: -1.7647059524760527
+        fontName: "YourFont-Bold",
+        size: 15.0,
+        lineHeight: 18.0,
+        letterSpacingPercent: -1.75
     ),
     .h4: .init(
-        fontName: "SpeedeeApp-Bold",
+        fontName: "YourFont-Bold",
         size: 14.0,
         lineHeight: 16.0,
         letterSpacingPercent: 0.0
     ),
     .paragraphMediumBold: .init(
-        fontName: "SpeedeeApp-Bold",
+        fontName: "YourFont-Bold",
         size: 14.0,
         lineHeight: 18.0,
         letterSpacingPercent: 0.0
     ),
     .paragraphMediumLink: .init(
-        fontName: "SpeedeeApp-Regular",
+        fontName: "YourFont-Regular",
         size: 14.0,
         lineHeight: 18.0,
         letterSpacingPercent: 0.0
     ),
     .paragraphMediumRegular: .init(
-        fontName: "SpeedeeApp-Regular",
+        fontName: "YourFont-Regular",
         size: 14.0,
         lineHeight: 18.0,
         letterSpacingPercent: 0.0
     ),
     .paragraphSmallBold: .init(
-        fontName: "SpeedeeApp-Bold",
+        fontName: "YourFont-Bold",
         size: 12.0,
         lineHeight: 15.0,
         letterSpacingPercent: 0.0
     ),
     .paragraphSmallLink: .init(
-        fontName: "SpeedeeApp-Regular",
+        fontName: "YourFont-Regular",
         size: 12.0,
         lineHeight: 15.0,
         letterSpacingPercent: 0.0
     ),
     .paragraphSmallRegular: .init(
-        fontName: "SpeedeeApp-Regular",
+        fontName: "YourFont-Regular",
         size: 12.0,
         lineHeight: 15.0,
         letterSpacingPercent: 0.0
     ),
     .paragraphXsmallBold: .init(
-        fontName: "SpeedeeApp-Bold",
+        fontName: "YourFont-Bold",
         size: 10.0,
         lineHeight: 16.0,
         letterSpacingPercent: 0.0
     ),
     .paragraphXsmallRegular: .init(
-        fontName: "SpeedeeApp-Regular",
+        fontName: "YourFont-Regular",
         size: 10.0,
         lineHeight: 16.0,
         letterSpacingPercent: 0.0
     ),
     .sizeIdle: .init(
-        fontName: "SpeedeeApp-Regular",
-        size: 17.0,
+        fontName: "YourFont-Regular",
+        size: 15.0,
         lineHeight: 20.0,
         letterSpacingPercent: 0.0
     ),
     .sizeSelected: .init(
-        fontName: "SpeedeeApp-Bold",
-        size: 17.0,
+        fontName: "YourFont-Bold",
+        size: 15.0,
         lineHeight: 20.0,
         letterSpacingPercent: 0.0
     ),
     .tabbarIdle: .init(
-        fontName: "SpeedeeApp-Regular",
-        size: 9.0,
-        lineHeight: 12.0,
+        fontName: "YourFont-Regular",
+        size: 8.0,
+        lineHeight: 11.0,
         letterSpacingPercent: 0.0
     ),
     .tabbarSelected: .init(
-        fontName: "SpeedeeApp-Bold",
-        size: 9.0,
-        lineHeight: 12.0,
+        fontName: "YourFont-Bold",
+        size: 8.0,
+        lineHeight: 11.0,
         letterSpacingPercent: 0.0
     ),
     .titleXl: .init(
-        fontName: "SpeedeeApp-Bold",
-        size: 82.0,
-        lineHeight: 104.0,
-        letterSpacingPercent: -1.8292682926829267
+        fontName: "YourFont-Bold",
+        size: 72.0,
+        lineHeight: 90.0,
+        letterSpacingPercent: -1.8
     ),
 ]
 

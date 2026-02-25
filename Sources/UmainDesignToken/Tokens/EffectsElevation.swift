@@ -148,7 +148,7 @@ private let elevationData: [EffectsElevation: ElevationTheme] = [
     ),
     .navigationBarOnScroll: .init(
         light: .init(
-            color: Color(hex: "#3C1BBE"),
+            color: Color(hex: "#2F1FAA"),
             blur: 0.0,
             positionY: 1.0,
             spread: nil
