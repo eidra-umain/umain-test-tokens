@@ -1,0 +1,207 @@
+name: Create Release
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      version_type:
+        description: 'Version bump type'
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+permissions:
+  contents: write
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Extract version from PR branch
+        id: extract-version
+        if: github.event_name == 'pull_request'
+        run: |
+          # Extract version from PR branch name (e.g., update-tokens-v1.2.3 -> v1.2.3)
+          PR_BRANCH="${{ github.event.pull_request.head.ref }}"
+          
+          if [[ "$PR_BRANCH" =~ update-tokens-v([0-9]+\.[0-9]+\.[0-9]+) ]]; then
+            VERSION="v${BASH_REMATCH[1]}"
+            echo "version=$VERSION" >> $GITHUB_OUTPUT
+            echo "Extracted version from branch: $VERSION"
+          else
+            echo "Could not extract version from branch name: $PR_BRANCH"
+            echo "skip_release=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+      
+      - name: Check if token files or Package.swift changed
+        id: check-changes
+        if: github.event_name == 'pull_request'
+        run: |
+          # Check if any token files or Package.swift were changed in the PR
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+          
+          TOKEN_FILES_CHANGED=false
+          PACKAGE_SWIFT_CHANGED=false
+          
+          if echo "$CHANGED_FILES" | grep -q "Sources/UmainDesignToken/Tokens/"; then
+            TOKEN_FILES_CHANGED=true
+          fi
+          
+          if echo "$CHANGED_FILES" | grep -q "Package.swift"; then
+            PACKAGE_SWIFT_CHANGED=true
+          fi
+          
+          echo "token_files_changed=$TOKEN_FILES_CHANGED" >> $GITHUB_OUTPUT
+          echo "package_swift_changed=$PACKAGE_SWIFT_CHANGED" >> $GITHUB_OUTPUT
+          
+          if [ "$TOKEN_FILES_CHANGED" != "true" ] && [ "$PACKAGE_SWIFT_CHANGED" != "true" ]; then
+            echo "No token files or Package.swift changed, skipping release"
+            echo "skip_release=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+      
+      - name: Get version for manual dispatch
+        id: get-version-manual
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          # Get the latest tag
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          echo "latest_tag=$LATEST_TAG" >> $GITHUB_OUTPUT
+          
+          # Extract version numbers (remove 'v' prefix)
+          VERSION=${LATEST_TAG#v}
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+          
+          VERSION_TYPE="${{ github.event.inputs.version_type }}"
+          
+          case $VERSION_TYPE in
+            major)
+              MAJOR=$((MAJOR + 1))
+              MINOR=0
+              PATCH=0
+              ;;
+            minor)
+              MINOR=$((MINOR + 1))
+              PATCH=0
+              ;;
+            patch)
+              PATCH=$((PATCH + 1))
+              ;;
+          esac
+          
+          NEW_VERSION="v${MAJOR}.${MINOR}.${PATCH}"
+          echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "New version: $NEW_VERSION"
+      
+      - name: Set final version
+        id: final-version
+        run: |
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            if [ "${{ steps.extract-version.outputs.skip_release }}" == "true" ] || [ "${{ steps.check-changes.outputs.skip_release }}" == "true" ]; then
+              echo "skip_release=true" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+            VERSION="${{ steps.extract-version.outputs.version }}"
+          else
+            VERSION="${{ steps.get-version-manual.outputs.version }}"
+          fi
+          
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Final version: $VERSION"
+      
+      - name: Check if tag already exists
+        id: check-tag
+        if: steps.final-version.outputs.skip_release != 'true'
+        run: |
+          VERSION="${{ steps.final-version.outputs.version }}"
+          if git rev-parse "$VERSION" >/dev/null 2>&1; then
+            echo "Tag $VERSION already exists, skipping tag creation"
+            echo "tag_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "tag_exists=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Create Git tag
+        if: steps.final-version.outputs.skip_release != 'true' && steps.check-tag.outputs.tag_exists != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          VERSION="${{ steps.final-version.outputs.version }}"
+          git tag -a "$VERSION" -m "Release $VERSION"
+
+          # Retry logic for tag push (3 attempts, 5s backoff)
+          PUSH_SUCCESS=false
+          for attempt in 1 2 3; do
+            if git push origin "$VERSION"; then
+              PUSH_SUCCESS=true
+              break
+            fi
+            echo "::warning::Tag push attempt $attempt failed, retrying in 5s..."
+            sleep 5
+          done
+          if [ "$PUSH_SUCCESS" != "true" ]; then
+            echo "::error::Tag push failed after 3 attempts"
+            echo "### ❌ Tag Push Failed" >> $GITHUB_STEP_SUMMARY
+            echo "Failed to push tag $VERSION after 3 attempts." >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+      
+      - name: Create GitHub Release
+        if: steps.final-version.outputs.skip_release != 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.final-version.outputs.version }}
+          name: Release ${{ steps.final-version.outputs.version }}
+          body: |
+            ## Package Updates
+            
+            This release includes updates to design tokens or package configuration.
+            
+            ### Installation
+            
+            ```swift
+            dependencies: [
+                .package(url: "https://github.com/umain/UmainTokensSPM", from: "${{ steps.final-version.outputs.version }}")
+            ]
+            ```
+            
+            ### Changes
+            - Updated design tokens from latest token definitions
+            - Package configuration updates (if applicable)
+          draft: false
+          prerelease: false
+
+      - name: Release Summary
+        if: always()
+        run: |
+          VERSION="${{ steps.final-version.outputs.version }}"
+          SKIP="${{ steps.final-version.outputs.skip_release }}"
+          TAG_EXISTS="${{ steps.check-tag.outputs.tag_exists }}"
+
+          echo "## Release Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ "$SKIP" = "true" ]; then
+            echo "⏭️ Release skipped — no token files or Package.swift changed, or version could not be extracted." >> $GITHUB_STEP_SUMMARY
+          elif [ "$TAG_EXISTS" = "true" ]; then
+            echo "⏭️ Tag \`$VERSION\` already exists — skipped tag creation, release still created." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ Released \`$VERSION\` successfully." >> $GITHUB_STEP_SUMMARY
+          fi
+
