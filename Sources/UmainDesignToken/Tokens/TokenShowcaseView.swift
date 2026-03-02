@@ -25,6 +25,12 @@ public struct TokenShowcaseView: View {
                     .padding(.vertical, 8)
                 }
                 
+                Section(header: Text("ColorExtensions").font(.headline)) {
+                    NavigationLink(destination: TokenListView<ColorExtensions>(title: "ColorExtensions")) {
+                        Text("ColorExtensions")
+                    }
+                }
+                
                 Section(header: Text("Colors").font(.headline)) {
                     NavigationLink(destination: TokenListView<Colors>(title: "Colors")) {
                         Text("Colors")
