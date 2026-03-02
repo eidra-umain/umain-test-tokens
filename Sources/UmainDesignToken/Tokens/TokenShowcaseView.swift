@@ -25,9 +25,57 @@ public struct TokenShowcaseView: View {
                     .padding(.vertical, 8)
                 }
                 
-                Section(header: Text("ColorExtensions").font(.headline)) {
-                    NavigationLink(destination: TokenListView<ColorExtensions>(title: "ColorExtensions")) {
-                        Text("ColorExtensions")
+                Section(header: Text("Palette").font(.headline)) {
+                    NavigationLink(destination: PaletteShowcase()) {
+                        Text("Palette")
+                    }
+                }
+
+                Section(header: Text("Semantic Colors").font(.headline)) {
+                    NavigationLink(destination: SemanticColorsShowcase()) {
+                        Text("Semantic Colors")
+                    }
+                }
+
+                Section(header: Text("Typography").font(.headline)) {
+                    NavigationLink(destination: TypographyShowcaseView()) {
+                        Text("Typography")
+                    }
+                }
+
+                Section(header: Text("Spacing").font(.headline)) {
+                    NavigationLink(destination: SpacingShowcase()) {
+                        Text("Spacing")
+                    }
+                }
+
+                Section(header: Text("Corner Radius").font(.headline)) {
+                    NavigationLink(destination: CornerRadiusShowcase()) {
+                        Text("Corner Radius")
+                    }
+                }
+
+                Section(header: Text("Icon Size").font(.headline)) {
+                    NavigationLink(destination: IconSizeShowcase()) {
+                        Text("Icon Size")
+                    }
+                }
+
+                Section(header: Text("Image Size").font(.headline)) {
+                    NavigationLink(destination: ImageSizeShowcase()) {
+                        Text("Image Size")
+                    }
+                }
+
+                Section(header: Text("Gradient Stops").font(.headline)) {
+                    NavigationLink(destination: GradientStopsShowcase()) {
+                        Text("Gradient Stops")
+                    }
+                }
+
+                Section(header: Text("Elevation").font(.headline)) {
+                    NavigationLink(destination: EffectsElevationShowcase()) {
+                        Text("Elevation")
                     }
                 }
             }
@@ -688,81 +736,6 @@ struct ElevationStyleRow: View {
             .cornerRadius(6)
         }
         .padding(.vertical, 8)
-    }
-}
-
-/// Visual showcase for Device & Orientation tokens (4 device types)
-struct DeviceAndOrientationShowcase: View {
-    var body: some View {
-        List {
-            Section(header: Text("Device & Orientation")) {
-                Text("Layout constraints for different devices and orientations")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            
-            Section(header: Text("Portrait")) {
-                ForEach(Array(Portrait.allCases), id: \.self) { token in
-                    HStack {
-                        Text(String(describing: token))
-                            .font(.body)
-                        Spacer()
-                        Text("\(Int(token.value))pt")
-                            .font(.system(.caption, design: .monospaced))
-                            .foregroundColor(.secondary)
-                    }
-                    .padding(.vertical, 4)
-                }
-            }
-            
-            Section(header: Text("Landscape")) {
-                ForEach(Array(Landscape.allCases), id: \.self) { token in
-                    HStack {
-                        Text(String(describing: token))
-                            .font(.body)
-                        Spacer()
-                        Text("\(Int(token.value))pt")
-                            .font(.system(.caption, design: .monospaced))
-                            .foregroundColor(.secondary)
-                    }
-                    .padding(.vertical, 4)
-                }
-            }
-            
-            Section(header: Text("Tablet Portrait")) {
-                ForEach(Array(TabletPortrait.allCases), id: \.self) { token in
-                    HStack {
-                        Text(String(describing: token))
-                            .font(.body)
-                        Spacer()
-                        Text("\(Int(token.value))pt")
-                            .font(.system(.caption, design: .monospaced))
-                            .foregroundColor(.secondary)
-                    }
-                    .padding(.vertical, 4)
-                }
-            }
-            
-            Section(header: Text("Tablet Landscape")) {
-                ForEach(Array(TabletLandscape.allCases), id: \.self) { token in
-                    HStack {
-                        Text(String(describing: token))
-                            .font(.body)
-                        Spacer()
-                        Text("\(Int(token.value))pt")
-                            .font(.system(.caption, design: .monospaced))
-                            .foregroundColor(.secondary)
-                    }
-                    .padding(.vertical, 4)
-                }
-            }
-        }
-        .navigationTitle("Device & Orientation")
-        .toolbar {
-            Text("\(Portrait.allCases.count + Landscape.allCases.count + TabletPortrait.allCases.count + TabletLandscape.allCases.count)")
-                .font(.system(.body, design: .monospaced))
-                .foregroundColor(.secondary)
-        }
     }
 }
 
