@@ -30,30 +30,6 @@ public struct TokenShowcaseView: View {
                         Text("ColorExtensions")
                     }
                 }
-                
-                Section(header: Text("Colors").font(.headline)) {
-                    NavigationLink(destination: TokenListView<Colors>(title: "Colors")) {
-                        Text("Colors")
-                    }
-                }
-                
-                Section(header: Text("Primitives").font(.headline)) {
-                    NavigationLink(destination: TokenListView<Primitives>(title: "Primitives")) {
-                        Text("Primitives")
-                    }
-                }
-                
-                Section(header: Text("Tokens").font(.headline)) {
-                    NavigationLink(destination: TokenListView<Tokens>(title: "Tokens")) {
-                        Text("Tokens")
-                    }
-                }
-                
-                Section(header: Text("UiEdges").font(.headline)) {
-                    NavigationLink(destination: TokenListView<UiEdges>(title: "UiEdges")) {
-                        Text("UiEdges")
-                    }
-                }
             }
             .navigationTitle("Design Tokens")
         }
